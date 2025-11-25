@@ -1,0 +1,210 @@
+/* ===================================
+   General Reset
+=================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #f5f6fa;
+  display: flex;
+  overflow-x: hidden;
+}
+
+/* ===================================
+   Dashboard Layout
+=================================== */
+.dashboard-container {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* ===================================
+   Main Content
+=================================== */
+.main-content {
+  margin-left: 260px;
+  padding: 40px;
+  flex: 1;
+  background: #f5f6fa;
+  min-height: 100vh;
+  transition: margin-left 0.4s ease, transform 0.4s ease;
+}
+
+.sidebar.collapsed ~ .main-content {
+  margin-left: 100px;
+  transform: translateX(10px);
+}
+
+/* ===================================
+   Header Section
+=================================== */
+.main-content header {
+  margin-bottom: 30px;
+  animation: fadeInDown 0.8s ease;
+}
+
+.main-content header h2 {
+  color: #27ae60;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.main-content header span {
+  color: #219150;
+}
+
+.main-content header p {
+  color: #777;
+  margin-top: 5px;
+}
+
+/* ===================================
+   Stats Section
+=================================== */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.stat-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 30px 20px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Decorative hover background effect */
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(39, 174, 96, 0.1);
+  transition: left 0.4s ease;
+}
+
+.stat-card:hover::before {
+  left: 0;
+}
+
+.stat-card i {
+  font-size: 2.5rem;
+  color: #27ae60;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover i {
+  transform: scale(1.2);
+}
+
+.stat-card h3 {
+  color: #444;
+  font-size: 1rem;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.stat-card p {
+  font-size: 1.6rem;
+  color: #219150;
+  font-weight: 700;
+}
+
+/* ===================================
+   Info Section
+=================================== */
+.info {
+  background: #e8f5ee;
+  border-radius: 10px;
+  padding: 25px 30px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  animation: fadeInUp 1s ease;
+}
+
+.info h3 {
+  color: #27ae60;
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+}
+
+.info p {
+  color: #333;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* ===================================
+   Animations
+=================================== */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===================================
+   Responsive Design
+=================================== */
+@media (max-width: 1024px) {
+  .main-content {
+    margin-left: 220px;
+    padding: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 100px;
+    padding: 20px;
+  }
+
+  .stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .stat-card h3 {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    margin-left: 0;
+    padding: 15px;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-card {
+    padding: 25px 15px;
+  }
+
+  .info {
+    padding: 20px;
+  }
+}

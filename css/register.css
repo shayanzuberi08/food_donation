@@ -1,0 +1,142 @@
+/* ===========================
+   General Reset & Layout
+=========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #27ae60, #2ecc71);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===========================
+   Main Form Container
+=========================== */
+.register-container {
+  flex: 1; /* fill remaining height between header and footer */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px; /* gives space around form */
+}
+
+/* Form Box */
+.form-box {
+  width: 100%;
+  max-width: 420px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  padding: 40px 30px;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.form-box h2 {
+  color: #27ae60;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.form-box p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+/* ===========================
+   Input Fields
+=========================== */
+.input-group {
+  display: flex;
+  align-items: center;
+  background: #f1f1f1;
+  border-radius: 30px;
+  margin-bottom: 15px;
+  padding: 10px 15px;
+  transition: 0.3s;
+}
+
+.input-group i {
+  color: #27ae60;
+  margin-right: 10px;
+}
+
+.input-group input,
+.input-group select {
+  border: none;
+  outline: none;
+  background: transparent;
+  flex: 1;
+  font-size: 1rem;
+  color: #333;
+}
+
+.input-group:hover {
+  background: #e8f5ee;
+  box-shadow: 0 0 5px #2ecc71;
+}
+
+/* ===========================
+   Button
+=========================== */
+.btn {
+  background-color: #27ae60;
+  color: white;
+  width: 100%;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #219150;
+  transform: scale(1.03);
+}
+
+/* ===========================
+   Login Link
+=========================== */
+.login-link {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.login-link a {
+  color: #27ae60;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+/* ===========================
+   Animation
+=========================== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===========================
+   Responsive
+=========================== */
+@media (max-width: 480px) {
+  .form-box {
+    width: 90%;
+    padding: 30px 20px;
+  }
+}

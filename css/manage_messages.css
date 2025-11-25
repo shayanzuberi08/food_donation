@@ -1,0 +1,163 @@
+/* ===============================
+   MAIN CONTENT AREA
+================================*/
+.main-content {
+  margin-left: 260px;
+  padding: 40px;
+  flex: 1;
+  transition: margin-left 0.4s ease;
+  background: #f5f6fa;
+  min-height: 100vh;
+}
+
+.sidebar.collapsed ~ .main-content {
+  margin-left: 100px;
+}
+
+/* ===============================
+   PAGE HEADINGS
+================================*/
+.main-content h1 {
+  color: #27ae60;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.main-content p {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* ===============================
+   TABLE STYLING
+================================*/
+.table-container {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  padding: 20px;
+  overflow-x: auto;
+  transition: margin-left 0.4s ease;
+}
+
+/* Adjust spacing when sidebar collapses */
+.sidebar.collapsed ~ .main-content .table-container {
+  margin-left: 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+thead {
+  background-color: #27ae60;
+  color: white;
+}
+
+th, td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* ===============================
+   ROLE BADGES
+================================*/
+.role {
+  padding: 4px 10px;
+  border-radius: 20px;
+  color: white;
+  font-size: 0.9rem;
+  text-transform: capitalize;
+}
+
+.role.admin {
+  background: #e74c3c;
+}
+
+.role.donor {
+  background: #27ae60;
+}
+
+.role.receiver {
+  background: #2980b9;
+}
+
+/* ===============================
+   MESSAGE CELL (for long messages)
+================================*/
+.msg-text {
+  max-width: 350px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ===============================
+   BUTTONS (delete / update)
+================================*/
+.delete-btn {
+  color: #e74c3c;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.delete-btn:hover {
+  color: #c0392b;
+}
+
+.update-btn {
+  background: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.update-btn:hover {
+  background: #219150;
+}
+
+/* ===============================
+   STATUS DROPDOWN
+================================*/
+.status-select {
+  padding: 5px 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 0.9rem;
+}
+
+/* ===============================
+   RESPONSIVE DESIGN
+================================*/
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  table {
+    font-size: 0.9rem;
+  }
+
+  .msg-text {
+    max-width: 150px;
+  }
+
+  .table-container {
+    margin-left: 0;
+    padding: 15px;
+  }
+}

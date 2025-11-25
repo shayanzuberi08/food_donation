@@ -1,0 +1,122 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #f5f6fa;
+  display: flex;
+}
+
+/* Main Content */
+.main-content {
+  margin-left: 260px;
+  padding: 40px;
+  flex: 1;
+  transition: margin-left 0.4s ease;
+  min-height: 100vh;
+}
+
+.sidebar.collapsed ~ .main-content {
+  margin-left: 100px;
+}
+
+.main-content h1 {
+  color: #27ae60;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.main-content p {
+  color: #555;
+  margin-bottom: 25px;
+}
+
+/* Table Styling */
+.table-container {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  padding: 20px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+thead {
+  background-color: #27ae60;
+  color: white;
+}
+
+th, td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd;
+  font-size: 0.95rem;
+}
+
+tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+small {
+  color: #888;
+  font-size: 0.85rem;
+}
+
+/* Status Badges */
+.status {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.status.pending {
+  background: #f39c12;
+}
+
+.status.approved {
+  background: #27ae60;
+}
+
+.status.delivered {
+  background: #3498db;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 100px;
+    padding: 20px;
+  }
+
+  table {
+    font-size: 0.9rem;
+  }
+
+  th, td {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    margin-left: 0;
+    padding: 15px;
+  }
+
+  table {
+    font-size: 0.85rem;
+  }
+}

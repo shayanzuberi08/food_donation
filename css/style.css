@@ -1,0 +1,122 @@
+/* General Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #f5f6fa;
+  color: #333;
+}
+
+
+/* Hero Section */
+.hero {
+  height: 90vh;
+  background: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.btn {
+  padding: 12px 28px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #27ae60;
+}
+
+.btn-outline {
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.btn-outline:hover {
+  background-color: white;
+  color: #2ecc71;
+}
+
+/* About Section */
+.about {
+  padding: 60px 80px;
+  text-align: center;
+  background-color: white;
+}
+
+.about h2 {
+  color: #2ecc71;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* Contact Section */
+.contact {
+  background-color: #ecf0f1;
+  text-align: center;
+  padding: 60px 80px;
+}
+
+.contact h2 {
+  color: #27ae60;
+  margin-bottom: 15px;
+}
+
+.contact a {
+  color: #2ecc71;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+

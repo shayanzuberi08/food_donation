@@ -1,0 +1,96 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #f5f6fa;
+  display: flex;
+}
+
+/* Sidebar Transition */
+.sidebar {
+  width: 250px;
+  background: linear-gradient(to bottom, #27ae60, #219150);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  position: fixed;
+  height: 100vh;
+  transition: width 0.4s ease;
+  overflow: hidden;
+}
+
+.sidebar.collapsed {
+  width: 80px;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.logo .logo-text {
+  white-space: nowrap;
+  overflow: hidden;
+  transition: opacity 0.3s;
+}
+
+.sidebar.collapsed .logo .logo-text {
+  opacity: 0;
+}
+
+/* Toggle Button */
+.toggle-btn {
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.toggle-btn:hover {
+  transform: rotate(90deg);
+}
+
+/* Sidebar Menu */
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li {
+  margin: 12px 0;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-weight: 500;
+  padding: 10px;
+  border-radius: 8px;
+  transition: background 0.3s, padding-left 0.3s;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+  background: rgba(255, 255, 255, 0.2);
+  padding-left: 15px;
+}
+
+.sidebar.collapsed ul li a span {
+  display: none;
+}
+
+.sidebar.collapsed ul li a {
+  justify-content: center;
+}
